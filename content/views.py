@@ -1,15 +1,16 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse("Home Page")
+    return render(request, 'content/index.html')
 
 
 def products(request):
-    return HttpResponse("Product Page")
+    return render(request, 'content/products.html', {'title': 'Products'})
 
 
 def contact(request):
-    return HttpResponse("Contact Page")
+    return render(request, 'content/contact.html', {'title': 'Contact'})
 
 
