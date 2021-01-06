@@ -7,7 +7,7 @@ class Product(models.Model):
     name = models.CharField(max_length=50)
     size = models.CharField(max_length=1, choices=Size.choices)
     colour = models.CharField(max_length=50)
-    image = models.ImageField(default='default.jpg', upload_to='product_pics')
+    image = models.ImageField(default='product_pics/default.jpg', upload_to='product_pics')
 
     def __str__(self):
         return self.name
