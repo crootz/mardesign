@@ -8,7 +8,7 @@
             <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
             <div class="card-body">
                 <p class="card-title">{{ product.name }}</p>
-                <a href="#" class="stretched-link"></a>
+                <a href="{% url 'content:product-detail' product.id %}" class="stretched-link"></a>
             </div>
         </div>
     </div>
