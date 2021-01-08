@@ -12,7 +12,6 @@ class ProductsListView(ListView):
     model = Product
     context_object_name = 'products'
     ordering = ['name']
-    paginate_by = 5 #Increase the later
 
 
 class ProductDetailView(DetailView):

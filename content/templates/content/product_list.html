@@ -1,16 +1,14 @@
 {% extends 'content/base.html' %}
 {% block content %}
 
-<div class="row row-cols-2 row-cols-md-4 g-2 g-md-4 py-3 py-md-5">
+<div class="row row-cols-2 row-cols-md-4 py-3 py-md-5">
     {% for product in products %}
     <div class="col">
-        <div class="card h-100">
-            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
-            <div class="card-body">
-                <p class="card-title">{{ product.name }}</p>
-                <a href="{% url 'content:product-detail' product.id %}" class="stretched-link"></a>
-            </div>
-        </div>
+        <figure class="figure position-relative">
+            <img src="{{ product.image.url }}" class="figure-img img-fluid rounded" alt="{{ product.name }}">
+            <figcaption class="figure-caption">{{ product.name }}</figcaption>
+            <a href="{% url 'content:product-detail' product.id %}" class="stretched-link"></a>
+        </figure>
     </div>
     {% endfor %}
 </div>
